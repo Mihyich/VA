@@ -26,7 +26,7 @@ ifeq ($(mode), debug)
 endif
 
 # файлы приложения
-APP_OBJ := $(OUT)/main.o $(OUT)/LE.o
+APP_OBJ := $(OUT)/main.o $(OUT)/ER_POL.o $(OUT)/LE.o
 
 app.exe : $(APP_OBJ)
 	$(CCPP) -o $@ $^

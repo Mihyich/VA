@@ -4,9 +4,7 @@
 #include <vector>
 #include <math.h>
 #include <iostream>
-
-#define LE_EPS 1e-9
-#define LE_IS_ZERO(x) (abs(x) > LE_EPS)
+#include "definers.h"
 
 class LE
 {

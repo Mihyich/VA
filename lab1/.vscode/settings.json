@@ -3,6 +3,7 @@
     {
         "*.h": "c",
         "LE.h": "cpp",
+        "ER_POL.h": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -47,7 +48,8 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "list": "cpp"
     },
 
     "files.insertFinalNewline": true,

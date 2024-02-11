@@ -70,7 +70,7 @@ bool LE::solve(void)
         return false;
     }
 
-    if (!(LE_IS_ZERO(determinant())))
+    if (!(IS_ZERO(determinant())))
     {
         this->error = "System hasn't single solution";
         return false;
@@ -109,7 +109,7 @@ double LE::determinant() const
     {
         for (int j = i + 1; j < n; ++j)
         {
-            ratio = LE_IS_ZERO(temp[i][i]) ? temp[j][i] / temp[i][i] : 0.f;
+            ratio = IS_ZERO(temp[i][i]) ? temp[j][i] / temp[i][i] : 0.f;
 
             for (int k = i; k < n; ++k)
                 temp[j][k] -= ratio * temp[i][k];
@@ -148,7 +148,7 @@ void LE::calc(void)
         // Приведение матрицы к верхнетреугольному виду
         for (int j = i + 1; j < n; ++j)
         {
-            if (LE_IS_ZERO(temp_mat[i][i]))
+            if (IS_ZERO(temp_mat[i][i]))
             {
                 factor = temp_mat[j][i] / temp_mat[i][i];
 
@@ -163,7 +163,7 @@ void LE::calc(void)
 
     for (int i = n - 1; i >= 0; --i)
     {
-        solution[i] = LE_IS_ZERO(temp_mat[i][i]) ? temp_mat[i][n] / temp_mat[i][i] : 0.0;
+        solution[i] = IS_ZERO(temp_mat[i][i]) ? temp_mat[i][n] / temp_mat[i][i] : 0.0;
 
         for (int j = i - 1; j >= 0; --j)
             temp_mat[j][n] -= temp_mat[j][i] * solution[i];
